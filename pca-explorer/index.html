@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal Component Analysis (PCA) Interactive Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <header class="py-16">
+            <h1>Principal Component Analysis (PCA) Interactive Demo</h1>
+            <br> Author: Shankar J  
+            <br> Website: https://shankar-jayaraj.github.io/  
+            <br> LinkedIn: https://www.linkedin.com/in/drshankarj  
+            <br> Licensed under CC BY-NC-SA 4.0. 
+
+
+
+            <p class="explanation">
+                Principal Component Analysis (PCA) is a dimensionality reduction technique that transforms high-dimensional data into a lower-dimensional space while preserving as much variance as possible. It identifies the directions (principal components) along which the data varies the most. This allows for visualization, noise reduction, and more efficient data processing while retaining the most important information.
+            </p>
+        </header>
+
+        <section class="controls-section card mb-24">
+            <div class="card__body">
+                <h2>Dataset Parameters</h2>
+                <div class="controls-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="clusters">Number of Clusters: <span id="clusters-value">3</span></label>
+                        <input type="range" id="clusters" class="form-control slider" min="2" max="5" value="3" step="1">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="samples">Samples per Cluster: <span id="samples-value">30</span></label>
+                        <input type="range" id="samples" class="form-control slider" min="10" max="50" value="30" step="5">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="noise">Noise Level: <span id="noise-value">0.5</span></label>
+                        <input type="range" id="noise" class="form-control slider" min="0.1" max="1.0" value="0.5" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <button id="generate-data" class="btn btn--primary">Generate New Data</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="visualizations-section">
+            <div class="viz-grid">
+                <div class="card viz-card">
+                    <div class="card__body">
+                        <h3>Original 3D Data</h3>
+                        <div id="original-3d" class="visualization"></div>
+                    </div>
+                </div>
+                
+                <div class="card viz-card">
+                    <div class="card__body">
+                        <div class="flex justify-between items-center mb-8">
+                            <h3>PCA 2D Projection</h3>
+                            <div class="pca-controls">
+                                <select id="pc-x" class="form-control form-control--sm">
+                                    <option value="0">PC1 (X-axis)</option>
+                                    <option value="1">PC2 (X-axis)</option>
+                                    <option value="2">PC3 (X-axis)</option>
+                                </select>
+                                <select id="pc-y" class="form-control form-control--sm">
+                                    <option value="1" selected>PC2 (Y-axis)</option>
+                                    <option value="0">PC1 (Y-axis)</option>
+                                    <option value="2">PC3 (Y-axis)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="pca-2d" class="visualization"></div>
+                    </div>
+                </div>
+                
+                <div class="card viz-card">
+                    <div class="card__body">
+                        <h3>Scree Plot</h3>
+                        <div id="scree-plot" class="visualization"></div>
+                    </div>
+                </div>
+                
+                <div class="card viz-card">
+                    <div class="card__body">
+                        <h3>Cumulative Explained Variance</h3>
+                        <div id="variance-plot" class="visualization"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section card mb-24">
+            <div class="card__body">
+                <h2>PCA Results</h2>
+                <div id="results-table"></div>
+            </div>
+        </section>
+
+        <!-- <section class="image-compression-section card">
+            <div class="card__body">
+                <h2>Image Compression with SVD/PCA</h2>
+                <p>SVD (Singular Value Decomposition) is closely related to PCA and can be used for image compression. Below is an example showing how reducing the number of components affects image quality:</p>
+                <div class="image-compression-demo">
+                    <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/308e7b7c624ff0a5d17d31da2e759e48/31158894-a092-4be0-9a0b-72742863c1ed/2238d9d1.png" alt="SVD Image Compression Example" class="compression-example">
+                </div>
+            </div>
+        </section> -->
+    </div>
+
+    <script src="app.js"></script>
+    <footer style="text-align:center; padding: 1em 0; font-size: 0.95em; color: #555; background: #f8f8f8;">
+  <div>
+    <strong>Author:</strong> Shankar J<br>
+    <strong>Website:</strong> <a href="https://shankar-jayaraj.github.io/" target="_blank" rel="noopener">shankar-jayaraj.github.io</a><br>
+    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/drshankarj" target="_blank" rel="noopener">drshankarj</a><br>
+    <strong>License:</strong> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+  </div>
+  <div style="margin-top: 0.5em;">
+    &copy; 2025 Shankar J. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
