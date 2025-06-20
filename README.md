@@ -2,7 +2,7 @@
 
 # FDP_IES_Day5_Shankar_J
 # 21/06/2025
-[Poster](assests/Poster.jpeg)
+[Poster](media/Poster.jpeg)
 
 
 This repository contains content created by [Shankar J](https://www.linkedin.com/in/drshankarj/) for FDP conducted at IES College of Engineering, Chittilapally
