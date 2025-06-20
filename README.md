@@ -14,8 +14,8 @@ Please adhere to the license and citation requirements when using or sharing thi
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
 **What this license means:**
-- Others can share and adapt your work, but only for non-commercial purposes.
-- They must credit you and license their new creations under identical terms.
+- Others can share and adapt my work, but only for non-commercial purposes.
+- They must credit me and license their new creations under identical terms.
 
 [cc-by-nc-sa]: https://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
